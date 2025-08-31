@@ -5,8 +5,7 @@ import {
   Section, 
   IconButton,
   Avatar,
-  Card,
-  Divider
+  Card
 } from '@telegram-apps/telegram-ui'
 
 const photographers = [
@@ -76,7 +75,7 @@ export function LandingPage() {
                   }}>
                     <Avatar
                       src={photographer.avatar}
-                      size={64}
+                      size={48}
                       style={{ marginRight: '16px' }}
                     />
                     <div style={{ flex: 1 }}>

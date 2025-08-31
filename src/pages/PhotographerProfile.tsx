@@ -147,7 +147,7 @@ export function PhotographerProfile() {
               }}>
                 <Avatar
                   src={photographer.avatar}
-                  size={80}
+                  size={96}
                   style={{ marginRight: '20px' }}
                 />
                 <div style={{ flex: 1 }}>
