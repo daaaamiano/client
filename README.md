@@ -4,7 +4,7 @@ A clean, modern photography portfolio showcasing the work of talented photograph
 
 ## 🚀 Live Demo
 
-Visit: `https://yourusername.github.io/nos-client/`
+Visit: `https://yourusername.github.io/client/`
 
 ## ✨ Features
 
@@ -48,7 +48,7 @@ npm run preview
    git add .
    git commit -m "Initial commit"
    git branch -M main
-   git remote add origin https://github.com/yourusername/nos-client.git
+   git remote add origin https://github.com/yourusername/client.git
    git push -u origin main
    ```
 
