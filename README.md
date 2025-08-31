@@ -1,69 +1,132 @@
-# React + TypeScript + Vite
+# 📸 Lens - Photography Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A clean, modern photography portfolio showcasing the work of talented photographers, built with React and Telegram UI components.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Visit: `https://yourusername.github.io/nos-client/`
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Clean Card-Based Design** - Telegram UI inspired interface
+- **Dark/Light Theme Toggle** - Automatic theme switching
+- **Responsive Portfolio Grid** - Beautiful image galleries
+- **Modal Image Viewer** - Full-screen image viewing
+- **Mobile Optimized** - Works great on all devices
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **React 19** - Latest React with modern features
+- **TypeScript** - Type-safe development
+- **Tailwind CSS v4** - Utility-first styling
+- **Telegram UI** - Native Telegram components
+- **Tanstack Router** - Type-safe routing
+- **Vite** - Fast build tool
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🏃‍♂️ Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📦 Deployment to GitHub Pages
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Automatic Deployment (Recommended)
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Push to GitHub**:
+   ```bash
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/yourusername/nos-client.git
+   git push -u origin main
+   ```
+
+2. **Enable GitHub Pages**:
+   - Go to your repository on GitHub
+   - Navigate to **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+   - The workflow will automatically deploy on every push to main
+
+### Manual Deployment
+
+```bash
+# Build the project
+npm run deploy
+
+# The built files will be in the 'dist' folder
 ```
+
+## 📁 Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+├── contexts/           # React contexts (theme, etc.)
+├── pages/             # Page components
+│   ├── LandingPage.tsx    # Main portfolio listing
+│   └── PhotographerProfile.tsx # Individual photographer page
+├── types/             # TypeScript type definitions
+└── main.tsx          # App entry point
+
+public/
+├── artists/          # Photographer profile images
+└── portfolio1/       # Portfolio photo collection
+```
+
+## 🎨 Customization
+
+### Adding New Photographers
+
+1. Add photographer data in `src/pages/LandingPage.tsx`:
+```tsx
+const photographers = [
+  {
+    id: 'photographer-id',
+    name: 'Photographer Name',
+    specialty: 'Photography Style',
+    avatar: '/artists/photographer.jpg',
+    portfolioCount: 20
+  }
+]
+```
+
+2. Add corresponding data in `src/pages/PhotographerProfile.tsx`
+
+### Changing Theme Colors
+
+Update CSS variables in `src/index.css`:
+```css
+:root {
+  --tg-theme-bg-color: #ffffff;
+  --tg-theme-text-color: #000000;
+  /* ... other theme colors */
+}
+```
+
+## 📸 Adding Portfolio Images
+
+1. Place images in `public/portfolio[X]/`
+2. Update the portfolio array in photographer data
+3. Images are automatically optimized and lazy-loaded
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📄 License
+
+MIT License - feel free to use this project for your own portfolio!
