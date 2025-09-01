@@ -20,7 +20,10 @@ const photographerRoute = createRoute({
 
 const routeTree = rootRoute.addChildren([indexRoute, photographerRoute])
 
-export const router = createRouter({ routeTree })
+export const router = createRouter({ 
+  routeTree,
+  basepath: import.meta.env.PROD ? '/client' : '/'
+})
 
 declare module '@tanstack/react-router' {
   interface Register {

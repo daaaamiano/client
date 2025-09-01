@@ -1,5 +1,6 @@
 import { Link } from '@tanstack/react-router'
 import { useTheme } from '../contexts/ThemeContext'
+import { getAssetPath } from '../utils/assets'
 import { 
   AppRoot, 
   Section, 
@@ -15,7 +16,7 @@ const photographers = [
     specialty: 'Shibari & Art Photography',
     bio: 'Capturing the essence of humanity through intimate portraits and evocative fine art imagery.',
     mood: 'Where shadows dance with light, stories unfold in silence.',
-    avatar: '/artists/ru-sagaris.jpg',
+    avatar: getAssetPath('/artists/ru-sagaris.jpg'),
     portfolioCount: 21
   }
 ]

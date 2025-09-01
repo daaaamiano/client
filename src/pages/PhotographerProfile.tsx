@@ -1,6 +1,7 @@
 import { useParams, Link } from '@tanstack/react-router'
 import { useState, useEffect } from 'react'
 import { useTheme } from '../contexts/ThemeContext'
+import { getAssetPath } from '../utils/assets'
 import { 
   AppRoot, 
   Section, 
@@ -18,7 +19,7 @@ const photographersData = {
     bio: 'Ru Sagaris is a visionary photographer whose work transcends traditional boundaries between portrait and fine art photography. With an eye for the extraordinary in the ordinary, Ru captures intimate moments that reveal the profound beauty of human experience.',
     mood: 'Where shadows dance with light, stories unfold in silence.',
     philosophy: 'Photography is not about the camera, but about the connection between the photographer, the subject, and the moment. Every portrait is a conversation without words.',
-    avatar: '/artists/ru-sagaris.jpg',
+    avatar: getAssetPath('/artists/ru-sagaris.jpg'),
     portfolio: [
       '/portfolio1/DAMIANO-8259.jpg',
       '/portfolio1/DAMIANO-8257.jpg',
@@ -41,7 +42,7 @@ const photographersData = {
       '/portfolio1/DAMIANO BNW-8261.jpg',
       '/portfolio1/DAMIANO BNW-8335.jpg',
       '/portfolio1/DAMIANO BNW-8263.jpg'
-    ]
+    ].map(path => getAssetPath(path))
   }
 }
 
